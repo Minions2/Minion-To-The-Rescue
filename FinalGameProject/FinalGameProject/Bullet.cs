@@ -12,7 +12,7 @@ namespace FinalGameProject
         Left = 1,
         Up = 2
     };
-
+// fail
     public class Bullet
     {
         public Direction DirectionBullet { get; set; }
