@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3CEE5E2F-B3A5-4F4A-8585-FB158D19DD35}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FinalGameProject</RootNamespace>
+    <AssemblyName>FinalGameProject</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Background.cs" />
+    <Compile Include="GameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameOver.Designer.cs">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Highscore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Highscore.Designer.cs">
+      <DependentUpon>Highscore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions.Designer.cs">
+      <DependentUpon>Instructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Injection.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="CollectingItem.cs" />
+    <Compile Include="CollectingItems.cs" />
+    <Compile Include="EvilMinion.cs" />
+    <Compile Include="EvilMinions.cs" />
+    <Compile Include="LevelChooserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LevelChooserForm.Designer.cs">
+      <DependentUpon>LevelChooserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIContainer.Designer.cs">
+      <DependentUpon>MDIContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PauseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PauseForm.Designer.cs">
+      <DependentUpon>PauseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileForm.Designer.cs">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vector.cs" />
+    <EmbeddedResource Include="GameOver.resx">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Highscore.resx">
+      <DependentUpon>Highscore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructions.resx">
+      <DependentUpon>Instructions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LevelChooserForm.resx">
+      <DependentUpon>LevelChooserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIContainer.resx">
+      <DependentUpon>MDIContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PauseForm.resx">
+      <DependentUpon>PauseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileForm.resx">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sketchBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cartoon-City-Building-PSD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\city-sunrise.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ssd1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ssd2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ssd3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ssl1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ssl2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ssl3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulletL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulletR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulletU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\injd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\injl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\injup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EL6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EL7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ER6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ER7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINIONL1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINIONL2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINIONL3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINIONL4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINIONL5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINIONL6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINIONL7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINIONR1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINIONR2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINIONR3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINIONR4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINIONR5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINIONR6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINIONR7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\389906_170x100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coin.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output_NepRN4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dwd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\life.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Happy.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Happy.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hi.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cmode.png" />
+    <None Include="Resources\right.png" />
+    <None Include="Resources\left.png" />
+    <None Include="Resources\key_space_bar_small.png" />
+    <None Include="Resources\6b08a36df1c529d8359eecc5e719559b.png" />
+    <None Include="Resources\proff.png" />
+    <None Include="Resources\pause11.jpg" />
+    <None Include="Resources\EdithSaved.png" />
+    <None Include="Resources\AgnesSaved.png" />
+    <None Include="Resources\VECTOR3.png" />
+    <None Include="Resources\VECTOR2.png" />
+    <None Include="Resources\VECTOR1.png" />
+    <None Include="Resources\BackgroundAgnes.png" />
+    <None Include="Resources\Background2.png" />
+    <None Include="Resources\Background.png" />
+    <None Include="Resources\jb1ncc9.jpg" />
+    <None Include="Resources\BCKRAgnes.jpg" />
+    <None Include="Resources\BACKGROUND3.png" />
+    <None Include="Resources\vectorMachine.png" />
+    <None Include="Resources\savevEdithBCK2.png" />
+    <None Include="Resources\saveEdithBCK.png" />
+    <None Include="Resources\MargoSaved.png" />
+    <None Include="Resources\MARGO8.png" />
+    <None Include="Resources\MARGO7.png" />
+    <None Include="Resources\MARGO6.png" />
+    <None Include="Resources\MARGO5.png" />
+    <None Include="Resources\MARGO4.png" />
+    <None Include="Resources\MARGO3.png" />
+    <None Include="Resources\MARGO2.png" />
+    <None Include="Resources\MARGO1.png" />
+    <None Include="Resources\M8.png" />
+    <None Include="Resources\M7.png" />
+    <None Include="Resources\M6.png" />
+    <None Include="Resources\M5.png" />
+    <None Include="Resources\M4.png" />
+    <None Include="Resources\M3.png" />
+    <None Include="Resources\M2.png" />
+    <None Include="Resources\EMIcon.png" />
+    <None Include="Resources\MAIN_BACKGROUND.png" />
+    <None Include="Resources\ER5.png" />
+    <None Include="Resources\ER4.png" />
+    <None Include="Resources\ER3.png" />
+    <None Include="Resources\ER2.png" />
+    <None Include="Resources\ER1.png" />
+    <None Include="Resources\EL5.png" />
+    <None Include="Resources\EL4.png" />
+    <None Include="Resources\EL3.png" />
+    <None Include="Resources\EL2.png" />
+    <None Include="Resources\EL1.png" />
+    <None Include="Resources\pnlPlay.png" />
+    <None Include="Resources\ProfilPic.jpg" />
+    <None Include="Resources\profill.png" />
+    <None Include="Resources\profil.jpg" />
+    <None Include="Resources\Minion_dave.jpg" />
+    <None Include="Resources\space.wav" />
+    <None Include="Resources\shoot.wav" />
+    <None Include="Resources\coins.wav" />
+    <None Include="Resources\LoginBcg.jpg" />
+    <None Include="Resources\banani.png" />
+    <None Include="Resources\Happy2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pocetna.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
